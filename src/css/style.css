@@ -1,0 +1,161 @@
+:root {
+  /* Theme colors */
+  --anthrazit: hsl(192, 11%, 18%);
+  --grayish-blue: #42536F;
+  --white: hsl(0, 0%, 100%);
+
+  --clr-primary: var(--clr-anthrazit);
+
+  /* Theme fonts */
+  --ff-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* --ff-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; */
+  /* --ff-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; */
+
+  --fc-primary: var(--clr-primary);
+  --ff-body: var(--ff-sans);
+  --ff-headline: var(--ff-sans);
+
+  /* Theme layout */
+  --box-narrow: 50rem;
+  --box-regular: 62.5rem;
+  --box-wide: 71.25rem;
+  --box-full: 100%;
+}
+
+@layer reset, content, layout, components;
+
+@layer reset {
+  /* Box sizing rules */
+  *, *:before, *:after {box-sizing: border-box;}
+
+  /* Prevent font size inflation */
+  html {
+    text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    hanging-punctuation: first last;
+  }
+
+  /* Set core root defaults */
+  html, html:focus-within {scroll-behavior: smooth;}
+
+  @media (prefers-reduced-motion: no-preference) {
+    :has(:target) {
+      scroll-behavior: smooth;
+      scroll-padding-top: 2rem;
+    }
+  }
+
+  /* Anything that has been anchored to should have extra scroll margin */
+  :target {scroll-margin-block: 5ex;}
+
+  /* Remove default margin in favour of better control in authored CSS */
+  body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, ul, ol, dl, dd  {margin: 0;}
+
+  /* Set core body defaults */
+  body {
+    min-height: 100svh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Set shorter line heights on headings and interactive elements */
+  h1, h2, h3, h4, button, input, label {line-height: 1.1;}
+
+  /* Balance text wrapping on headings */
+  h1, h2, h3, h4 {text-wrap: balance;}
+
+  /* Balance text wrapping on paragraphs */
+  p {text-wrap: pretty;}
+
+  /* Inherit fonts for inputs and buttons */
+  input, button, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  h1, h2, h3, h4, button, input, label {line-height: 1.1;}
+  
+  /* Remove list styles on ul, ol elements with a role, which suggests default styling will be removed */
+  ol[role="menu"], ul[role="menu"] {
+    list-style: none;
+    padding: 0;
+  }
+  
+  a[role="menuitem"] {text-decoration: none;}
+
+  /* To smooth hover transition */
+  a {
+    transition: 150ms ease-in-out;
+    transition-property: color, background-color;
+  }
+
+  /* Makes easier to work with */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* remove animations for people who've turned them off */
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer layout {
+  .box-header, .box-content, .box-footer {margin-inline: auto;}
+
+  .box-header {
+    padding: 1.5rem 1rem;
+    width: var(--box-wide);
+  }
+  .box-content {
+    padding: 5rem 1rem;
+    width: var(--box-regular);
+  }
+
+  .box-footer {
+    width: var(--box-wide);
+  }
+}
+
+@layer content {
+  body {
+    color: var(--fc-primary);
+    font-family: var(--ff-body);
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+  }
+  
+  h1, h2, h3 {
+    color: var(--fc-primary);
+    font-family: var(--ff-headline);
+  }
+
+  p {
+    color: var(--fc-primary);
+  }
+
+  ul[role="menu"] {display: flex;}
+}
+
+@layer components {
+
+}
+
+@layer utilities {
+  .d-flex {
+    display: flex;
+  }
+
+  .scroll-x {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
