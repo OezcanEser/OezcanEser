@@ -1,320 +1,84 @@
-:root {
-  /* Colors */
-  --anthrazit: hsl(192, 11%, 18%);
-  --grayish-blue: hsl(217, 25%, 35%);
-  --cyan-green: hsl(165, 45%, 53%);
-  --white: hsl(0, 0%, 100%);
-  --gray: hsl(80, 3%, 58%);
-  --black: hsl(0, 0%, 0%);
-  --green: hsl(127, 69%, 43%);
-  --red: hsl(359, 70%, 43%);
-  --yellow: hsl(35, 84%, 62%);
-  --blue: hsl(208, 62%, 49%);
-
-  --clr-primary-400: var(--anthrazit);
-  --clr-secondary-400: var(--grayish-blue);
-  --clr-accent-400: var(--cyan-green);
-
-  --clr-succes: var(--green);
-  --clr-error: var(--red);
-  --clr-warning: var(--yellow);
-  --clr-info: var(--blue);
-  --clr-disable: var(--gray);
-
-  /* Font colors */
-  --fc-primary: var(--clr-primary-400);
-  --fc-invert: var(--white);
-
-  --fc-body: var(--fc-primary);
-  --fc-headline: var(--fc-primary);
-  --fc-paragraph: var(--fc-primary);
-  --fc-anchor: var(--fc-primary);
-  --fc-button: var(--fc-primary);
-
-  /* Background colors */
-  --bg-primary: var(--white);
-  --bg-invert: var(--clr-secondary-400);
-
-  /* Container widths */
-  --width-narrow: 50rem;
-  --width-default: 62.5rem;
-  --width-wide: 71.25rem;
-
-  /* Fallback fonts */
-  --ff-sans: ui-sans-serif, system-ui, -apple-system;
-  --ff-serif: ui-serif;
-  --ff-mono: ui-monospace;
-
-  /* Font families */
-  --ff-primary: var(--ff-sans);
-  --ff-accent: var(--ff-serif);
-
-  --ff-body: var(--ff-primary);
-  --ff-headline: var(--ff-primary);
-  --ff-paragraph: var(--ff-paragraph);
-
-  /* Line heights */
-  --lh-15: 1.5;
-  --lh-12: 1.2;
-
-  --lh-body: var(--lh-15);
-  --lh-paragrah: var(--lh-15);
-  --lh-headline: var(--lh-12);
-
-  /* Font weights */
-  --fw-700: 700;
-  --fw-400: 400;
-  --fw-100: 100;
-
-  /* Font sizes mobile */
-  --fs-3xl: 3.75rem;
-  --fs-2xl: 2.5rem;
-  --fs-xl: 2.25rem;
-  --fs-lg: 1.75rem;
-  --fs-md: 1.25rem;
-  --fs-rg: 1rem;
-  --fs-sm: 0.75rem;
-
-  --fs-body: var(--fs-rg);
-  --fs-paragrah: var(--fs-rg);
+header {
+  position: sticky;
+  top: 0;
 }
 
-/* Font sizes tablet */
-@media (min-width: 768px) {
-  :root {
-    --fs-3xl: 4rem;
-    --fs-2xl: 3rem;
-    --fs-xl: 2.5rem;
-    --fs-lg: 1.75rem;
-    --fs-md: 1.25rem;
-    --fs-rg: 1.25rem;
-    --fs-sm: 1rem;
-  }
-}
-
-/* Font sizes desktop */
-@media (min-width: 1024px) {
-  :root {
-    --fs-3xl: 4.25rem;
-    --fs-2xl: 3.25rem;
-    --fs-xl: 2.75rem;
-    --fs-lg: 2rem;
-    --fs-md: 1.75rem;
-    --fs-rg: 1.25rem;
-    --fs-sm: 1rem;
-  }
-}
-
-@layer reset, content, layout, components;
-
-@layer reset {
-  /* Box sizing rules */
-  *, *:before, *:after {box-sizing: border-box;}
-
-  /* Prevent font size inflation */
-  html {
-    text-size-adjust: none;
-    -moz-text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    hanging-punctuation: first last;
-  }
-
-  /* Set core root defaults */
-  html, html:focus-within {scroll-behavior: smooth;}
-
-  @media (prefers-reduced-motion: no-preference) {
-    :has(:target) {
-      scroll-behavior: smooth;
-      scroll-padding-top: 2rem;
-    }
-  }
-
-  /* Anything that has been anchored to should have extra scroll margin */
-  :target {scroll-margin-block: 5ex;}
-
-  /* Remove default margin in favour of better control in authored CSS */
-  body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, ul, ol, dl, dd  {margin: 0;}
-
-  /* Set core body defaults */
-  body {
-    min-height: 100svh;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* Set shorter line heights on headings and interactive elements */
-  h1, h2, h3, h4, button, input, label {line-height: 1.2;}
-
-  /* Balance text wrapping on headings */
-  h1, h2, h3, h4 {text-wrap: balance;}
-
-  /* Balance text wrapping on paragraphs */
-  p {text-wrap: pretty;}
-
-  /* Inherit fonts for inputs and buttons */
-  input, button, textarea, select {
-    font-family: inherit;
-    font-size: inherit;
-  }
-
-  /* Remove list styles on ul, ol elements with a role, which suggests default styling will be removed */
-  ol[role="menu"], ul[role="menu"] {
-    list-style: none;
-    padding: 0;
-  }
+header, footer {
+  background-color: var(--bg-invert);
   
-  a[role="menuitem"] {text-decoration: none;}
-
-  /* To smooth hover transition */
   a {
-    transition: 150ms ease-in-out;
-    transition-property: color, background-color;
+    --fc-anchor: var(--fc-invert);
+    text-decoration: none;
   }
 
-  /* Makes easier to work with */
-  img, picture, video, canvas, svg {
-    display: block;
-    height: auto;
-    max-width: 100%;
-  }
-
-  /* remove animations for people who've turned them off */
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-@layer layout {
-  .box-header, .box-content, .box-footer {margin-inline: auto;}
-
-  .box-header {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding-inline: 1rem;
-    max-width: var(--width-wide);
-  }
-
-  .box-content {
-    padding: 5rem 1rem;
-    max-width: var(--width-default);
-  }
-
-  .box-footer {
-    max-width: var(--width-wide);
-  }
-}
-
-@layer content {
-  body {
-    color: var(--fc-body);
-    font-family: var(--ff-body);
-    font-size: var(--fs-body);
-    line-height: var(--lh-body);
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--fc-headline);
-    font-family: var(--ff-headline);
-    line-height: var(--lh-headline);
-    &:not(h1) {
-      text-decoration: 6px underline var(--clr-accent-400);
-    }
-  }
-
-  h1 {
-    font-size: var(--fs-headline, var(--fs-3xl));
-  }
-
-  h2 {
-    font-size: var(--fs-headline, var(--fs-2xl));
-  }
-
-  h3 {
-    font-size: var(--fs-headline, var(--fs-xl));
-  }
-
-  h4 {
-    font-size: var(--fs-headline, var(--fs-lg));
-  }
-
-  h5 {
-    font-size: var(--fs-headline, var(--fs-md));
-  }
-
-  h6 {
-    font-size: var(--fs-headline, var(--fs-sm));
-  }
-
-  p {
-    color: var(--fc-paragraph);
-    font-family: var(--ff-paragraph);
-    font-size: var(--fs-paragrah);
-    line-height: var(--lh-paragrah);
-  }
-
-  a {
-    color: var(--fc-anchor);
-
-    &:hover {
-      color: var(--fc-anchor);
-      background-color: var(--bg-anchor);
-    }
-  }
-
-  button {
-    color: var(--fc-button);
-  }
-
-  ul[role="menu"] {
-    display: flex;
-  }
-}
-
-@layer components {
-  header {
-    position: sticky;
-    top: 0;
-  }
-
-  header, footer {
-    background-color: var(--bg-invert);
+  nav a {
+    display: inline-block;
+    padding: var(--space-md) var(--space-sm);
     
-    a {
-      --fc-anchor: var(--fc-invert);
-      text-decoration: none;
+    &:hover {
+      --fc-anchor: var(--fc-hvr-anchor);
+      --bg-anchor: var(--bg-hvr-anchor);
     }
-
-    nav a {
-      display: inline-block;
-      padding: 1.5rem 1rem;
-      
-      &:hover {
-        --fc-anchor: var(--fc-primary);
-        --bg-anchor: var(--bg-primary);
-      }
-    }
-  }
-
-  .hero {
-    --fc-headline: var(--fc-invert);
-    --fc-paragraph: var(--fc-invert);
-    background: var(--bg-invert);
-    height: 75vh;
-  }
-
-  .bg-invert {
-    --fc-headline: var(--fc-invert);
-    --fc-paragraph: var(--fc-invert);
-    background: var(--bg-invert);
   }
 }
 
-@layer utilities {
-  .d-flex {
-    display: flex;
+.hero {
+  --fc-headline: var(--fc-invert);
+  --fc-paragraph: var(--fc-invert);
+  background: var(--bg-invert);
+}
+
+form, .form-group {display: grid;}
+
+form {gap: var(--space-md);}
+
+.form-group {gap: var(--fs-sm)}
+
+label {
+  color: var(--fc-invert);
+  &::after {
+    content: "*";
+    color: var(--clr-accent-400);
+    margin-left: var(--space-xs);
   }
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+button[type="submit"] {
+  padding: var(--space-xs) var(--space-sm);
+}
+
+button[type="submit"]:hover {
+  --fc-button: var(--fc-hvr-button);
+  --bg-button: var(--bg-hvr-button);
+}
+
+.bg-invert {
+  --fc-headline: var(--fc-invert);
+  --fc-paragraph: var(--fc-invert);
+  background: var(--bg-invert);
+}
+
+.box-header, .box-content, .box-footer {margin-inline: auto;}
+
+.box-header,
+.box-footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: var(--space-sm);
+  max-width: var(--width-wide);
+}
+
+.box-content {
+  --columns: 1;
+  display: grid;
+  gap: var(--space-sm);
+  grid-template-columns: repeat(var(--columns), 1fr);
+  padding: 5rem var(--space-sm);
+  max-width: var(--width-regular);
+
+  @media (min-width: 1024px) {--columns: 2;}
 }

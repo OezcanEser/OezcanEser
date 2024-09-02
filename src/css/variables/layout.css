@@ -1,0 +1,12 @@
+:root {
+  /* Container widths */
+  --width-wide: 80rem;
+  --width-regular: 75rem;
+  --width-narrow: 65rem;
+
+  /* Spaces */
+  --space-lg: 2rem;
+  --space-md: 1.5rem;
+  --space-sm: 1rem;
+  --space-xs: .5rem;
+}

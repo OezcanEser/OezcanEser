@@ -1,0 +1,67 @@
+:root {
+  /* Fallback fonts */
+  --ff-sans: ui-sans-serif, system-ui, -apple-system;
+  --ff-serif: ui-serif;
+  --ff-mono: ui-monospace;
+
+  /* Font families */
+  --ff-primary: var(--ff-sans);
+  --ff-accent: var(--ff-serif);
+
+  --ff-body: var(--ff-primary);
+  --ff-headline: var(--ff-primary);
+  --ff-paragraph: var(--ff-primary);
+  --ff-anchor: inherit;
+  --ff-button: inherit;
+
+  /* Line heights */
+  --lh-15: 1.5;
+  --lh-12: 1.2;
+
+  --lh-body: var(--lh-15);
+  --lh-paragrah: var(--lh-15);
+  --lh-headline: var(--lh-12);
+
+  /* Font weights */
+  --fw-700: 700;
+  --fw-400: 400;
+  --fw-100: 100;
+
+  /* Font sizes mobile */
+  --fs-3xl: 3.75rem;
+  --fs-2xl: 2.5rem;
+  --fs-xl: 2.25rem;
+  --fs-lg: 1.75rem;
+  --fs-md: 1.25rem;
+  --fs-rg: 1rem;
+  --fs-sm: 0.75rem;
+
+  --fs-body: var(--fs-rg);
+  --fs-paragrah: var(--fs-rg);
+}
+
+/* Font sizes tablet */
+@media (min-width: 768px) {
+  :root {
+    --fs-3xl: 4rem;
+    --fs-2xl: 3rem;
+    --fs-xl: 2.5rem;
+    --fs-lg: 1.75rem;
+    --fs-md: 1.25rem;
+    --fs-rg: 1.25rem;
+    --fs-sm: 1rem;
+  }
+}
+
+/* Font sizes desktop */
+@media (min-width: 1024px) {
+  :root {
+    --fs-3xl: 4.25rem;
+    --fs-2xl: 3.25rem;
+    --fs-xl: 2.75rem;
+    --fs-lg: 2rem;
+    --fs-md: 1.75rem;
+    --fs-rg: 1.25rem;
+    --fs-sm: 1rem;
+  }
+}

@@ -1,0 +1,43 @@
+:root {
+  --anthrazit: hsl(192, 11%, 18%);
+  --grayish-blue: hsl(217, 25%, 35%);
+  --cyan-green: hsl(165, 45%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --gray: hsl(80, 3%, 58%);
+  --black: hsl(0, 0%, 0%);
+  --green: hsl(127, 69%, 43%);
+  --red: hsl(359, 70%, 43%);
+  --yellow: hsl(35, 84%, 62%);
+  --blue: hsl(208, 62%, 49%);
+
+  --clr-primary-400: var(--anthrazit);
+  --clr-secondary-400: var(--grayish-blue);
+  --clr-accent-400: var(--cyan-green);
+
+  --clr-succes: var(--green);
+  --clr-error: var(--red);
+  --clr-warning: var(--yellow);
+  --clr-info: var(--blue);
+  --clr-disable: var(--gray);
+
+  /* Font colors */
+  --fc-primary: var(--clr-primary-400);
+  --fc-invert: var(--white);
+
+  --fc-body: var(--fc-primary);
+  --fc-headline: var(--fc-primary);
+  --fc-paragraph: var(--fc-primary);
+  --fc-anchor: var(--fc-primary);
+  --fc-button: var(--fc-primary);
+
+  /* Background colors */
+  --bg-primary: var(--white);
+  --bg-invert: var(--clr-secondary-400);
+  --bg-button: var(--white);
+
+  /* Hover colors */
+  --fc-hvr-anchor: var(--clr-primary-400);
+  --bg-hvr-anchor: var(--white);
+  --fc-hvr-button: var(--clr-primary-400);
+  --bg-hvr-button: var(--clr-accent-400);
+}

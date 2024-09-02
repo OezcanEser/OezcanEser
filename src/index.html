@@ -5,8 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta
   name="description"
-  content="Hi there! This is my minimalistic website cv! Feel free to check it out and contact me!">
+  content="Hi there! This is my powerful minimalistic website cv! Feel free to check it out and contact me!">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables/colors.css">
+  <link rel="stylesheet" href="css/variables/fonts.css">
+  <link rel="stylesheet" href="css/variables/layout.css">
+  <link rel="stylesheet" href="css/variables/content.css">
   <link rel="stylesheet" href="css/style.css">
+
   <title>Özcan Eser</title>
 </head>
 <body>
@@ -62,21 +69,48 @@
           </h1>
         </hgroup>
         <p>
-          I'm a Web Designer + Web Developer based in Germany
+          Web Designer & Developer based in Germany.
+          I bring creative visions to life with beautiful, functional websites. Let's build something amazing together!
         </p>
       </div>
     </div>
     <div>
       <div class="box-content">
-        <hgroup>
+        <div>
+          <hgroup>
+            <p>
+              Get to Know Me
+            </p>
+            <h2 id="about">
+              About
+            </h2>
+          </hgroup>
           <p>
-            About
+            I’m a passionate Web Designer and Web Developer based in Germany, with a strong background in creating visually compelling and highly functional websites.
+            <br>
+            <br>
+            My journey in the digital world began with photography, focusing on nightclub and model photography, where I honed my skills in retouching and editing.
+            <br>
+            <br>
+            This early experience sparked my interest in the broader field of digital design, leading me to pursue further education as a Media Designer.
+            <br>
+            <br>
           </p>
-          <h2 id="about">
-            About
-          </h2>
-        </hgroup>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, porro.</p>
+        </div>
+        <div>
+          <p>
+            To deepen my skills and expand my expertise, I completed an intensive bootcamp in Full-Stack Web Development.
+            <br>
+            <br>
+            This experience allowed me to master the latest technologies and development practices, enabling me to create dynamic, responsive, and user-friendly web applications.
+            <br>
+            <br>
+            My expertise now lies in blending creative design with cutting-edge development techniques to deliver user-friendly digital experiences.
+            <br>
+            <br>
+            I have a keen eye for detail, a deep understanding of UX/UI principles, and the technical skills to bring ideas to life across multiple platforms.
+          </p>
+        </div>
         <picture>
           <img src="" alt="Özcan Eser">
         </picture>
@@ -86,7 +120,7 @@
       <div class="box-content">
         <hgroup>
           <p>
-            Projects
+            My Latest Work
           </p>
           <h2 id="projects">
             Projects
@@ -98,20 +132,120 @@
       <div class="box-content">
         <hgroup>
           <p>
-            Skills
+            My Strengths
           </p>
           <h2 id="skills">
             Skills
           </h2>
         </hgroup>
+        <div>
+          <h3>
+            Web Design:
+          </h3>
+          <ul>
+            <li>Responsive Design</li>
+            <li>UI/UX Design</li>
+            <li>Graphic Design</li>
+            <li>Graphic Design</li>
+            <li>Prototyping</li>
+            <li>Branding</li>
+          </ul>
+        </div>
+        <div>
+          <h3>
+            Web Development:
+          </h3>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>SASS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>HubL</li>
+          </ul>
+        </div>
+        <div>
+          <h3>
+            Tools & Technologies:
+          </h3>
+          <ul>
+            <li>Adobe Creative Suite (Photoshop, Illustrator, XD)</li>
+            <li>Figma</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Bootstrap</li>
+            <li>HubSpot</li>
+            <li>WordPress</li>
+          </ul>
+        </div>
+        <div>
+          <h3>
+            Other Skills:
+          </h3>
+          <ul>
+            <li>SEO Optimization</li>
+            <li>Cross-Browser Compatibility</li>
+            <li>Web Performance Optimization</li>
+          </ul>
+        </div>
+        <div>
+          <h3>
+            Experience:
+          </h3>
+          <ul>
+            <li>Medien Design</li>
+          </ul>
+        </div>
+        <div>
+          <h3>
+            Languages:
+          </h3>
+          <ul>
+            <li>German (Native)</li>
+            <li>English (Fluent)</li>
+            <li>Türkish (Native)</li>
+          </ul>
+        </div>
+          <!-- | [Your Company Name] | [Years Active]
+
+          Designed and developed over [X] websites for various clients, ensuring a perfect balance between aesthetics and functionality.
+          Collaborated closely with clients to understand their vision and translated it into high-quality, user-centric web solutions.
+          Implemented SEO strategies and optimized website performance, resulting in [X]% increase in traffic and user engagement.
+          [Previous Job Title] | [Previous Company Name] | [Years Active]
+
+          [Briefly describe key responsibilities and achievements, focusing on your design and development work.]
+          Education:
+
+          [Degree] in [Field] | [University Name] | [Year of Graduation] -->
       </div>
     </div>
     <div class="bg-invert">
       <div class="box-content">
         <hgroup>
-          <p>Contact</p>
+          <p>Connect with Me</p>
           <h2 id="contact">Contact</h2>
         </hgroup>
+        <form action="/submit" method="post">
+          <div class="form-group">
+            <label for="name">Vor- und Nachname</label>
+            <input type="text" id="name" name="name" required aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="company">Firma</label>
+            <input type="text" id="company" name="company" required aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" required aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="message">Nachricht</label>
+            <textarea id="message" name="message" required aria-required="true"></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit">Absenden</button>
+          </div>
+        </form>
       </div>
     </div>
     <!-- <div class="top-scroll">
@@ -130,6 +264,30 @@
           <li role="none">
             <a role="menuitem" href="#">
               AGB
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav aria-label="socialmedia">
+        <ul role="menu" id="socialmedia">
+          <li role="none">
+            <a role="menuitem" href="#">
+              Facebook
+            </a>
+          </li>
+          <li role="none">
+            <a role="menuitem" href="#">
+              Instagram
+            </a>
+          </li>
+          <li role="none">
+            <a role="menuitem" href="#">
+              GitHub
+            </a>
+          </li>
+          <li role="none">
+            <a role="menuitem" href="#">
+              etc.
             </a>
           </li>
         </ul>
