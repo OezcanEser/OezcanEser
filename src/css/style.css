@@ -8,16 +8,15 @@ header, footer {
   
   a {
     --fc-anchor: var(--fc-invert);
-    text-decoration: none;
+    text-decoration: 6px underline var(--clr-underline-anchor);
   }
 
-  nav a {
+  a[role=menuitem] {
     display: inline-block;
     padding: var(--space-md) var(--space-sm);
     
     &:hover {
-      --fc-anchor: var(--fc-hvr-anchor);
-      --bg-anchor: var(--bg-hvr-anchor);
+      --clr-underline-anchor: var(--clr-underline);
     }
   }
 }
@@ -75,10 +74,18 @@ button[type="submit"]:hover {
 .box-content {
   --columns: 1;
   display: grid;
-  gap: var(--space-sm);
+  gap: var(--space-md);
   grid-template-columns: repeat(var(--columns), 1fr);
   padding: 5rem var(--space-sm);
   max-width: var(--width-regular);
 
   @media (min-width: 1024px) {--columns: 2;}
 }
+
+.card {
+  display: grid;
+  height: fit-content;
+  gap: var(--space-xs);
+}
+
+hgroup {grid-column: 1 / -1;}

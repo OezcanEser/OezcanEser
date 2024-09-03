@@ -5,49 +5,43 @@ body {
   line-height: var(--lh-body);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--fc-headline);
-  font-family: var(--ff-headline);
-  line-height: var(--lh-headline);
-
-  &:not(h1) {text-decoration: 6px underline var(--clr-accent-400);}
-}
-
-h1 {
-  font-size: var(--fs-headline, var(--fs-3xl));
-  margin-bottom: var(--space-lg);
-}
-
-h2 {
-  font-size: var(--fs-headline, var(--fs-2xl));
-  margin-bottom: var(--space-md);
-}
-
-h3 {
-  font-size: var(--fs-headline, var(--fs-xl));
-  margin-bottom: var(--space-sm);
-}
-
-h4 {
-  font-size: var(--fs-headline, var(--fs-lg));
-  margin-bottom: var(--space-sm);
-}
-
-h5 {
-  font-size: var(--fs-headline, var(--fs-md));
-  margin-bottom: var(--space-sm);
-}
-
-h6 {
-  font-size: var(--fs-headline, var(--fs-sm));
-  margin-bottom: var(--space-sm);
-}
-
 p {
   color: var(--fc-paragraph);
   font-family: var(--ff-paragraph);
   font-size: var(--fs-paragrah);
   line-height: var(--lh-paragrah);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--fc-headline);
+  font-family: var(--ff-headline);
+  line-height: var(--lh-headline);
+}
+
+h2{text-decoration: 6px underline var(--clr-underline);}
+
+h1 {
+  font-size: var(--fs-headline, var(--fs-3xl));
+}
+
+h2 {
+  font-size: var(--fs-headline, var(--fs-2xl));
+}
+
+h3 {
+  font-size: var(--fs-headline, var(--fs-xl));
+}
+
+h4 {
+  font-size: var(--fs-headline, var(--fs-lg));
+}
+
+h5 {
+  font-size: var(--fs-headline, var(--fs-md));
+}
+
+h6 {
+  font-size: var(--fs-headline, var(--fs-sm));
 }
 
 a {
@@ -58,9 +52,8 @@ a {
 button {
   color: var(--fc-button);
   background: var(--bg-button);
-  border: 0;
 }
 
 ul[role="menu"] {display: flex;}
 
-::marker {color: var(--clr-accent-400);}
+::marker {color: var(--clr-liststyle);}
