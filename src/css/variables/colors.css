@@ -26,7 +26,7 @@
 
   /* Font colors */
   --fc-primary: var(--clr-primary-400);
-  --fc-invert: var(--white);
+  --fc-secondary: var(--white);
 
   --fc-body: var(--fc-primary);
   --fc-headline: var(--fc-primary);
@@ -36,7 +36,7 @@
 
   /* Background colors */
   --bg-primary: var(--white);
-  --bg-invert: var(--clr-secondary-400);
+  --bg-secondary: var(--clr-secondary-400);
   --bg-anchor: var(--transparent);
   --bg-button: var(--white);
 

@@ -20,12 +20,12 @@
       <a class="logo" href="#">
         Özcan Eser
       </a>
-      <nav aria-label="primary">
-        <button class="burger-icon" id="burger-icon" aria-expanded="false">
-          <span visibility: hidden>Navigation</span>
-          <span class="burger-line"></span>
-        </button>
-        <ul role="menu" id="mainmenu">
+      <button class="icon-burger" id="icon-burger" aria-expanded="false">
+        <span visibility: hidden>Navigation</span>
+        <span class="line-burger"></span>
+      </button>
+      <nav id="nav-primary" class="nav-primary" aria-label="primary">
+        <ul role="menu">
           <li role="none">
             <a role="menuitem" href="#hero">
               Start
@@ -70,6 +70,9 @@
           Web Designer & Developer based in Germany.
           I bring creative visions to life with beautiful, functional websites. Let's build something amazing together!
         </p>
+        <picture>
+          <img src="assets/img/oezcaneser.avif" alt="Özcan Eser, Web Designer and Developer" width: 600px, height: 600px>
+        </picture>
       </div>
     </div>
     <div class="about">
@@ -84,28 +87,17 @@
         </hgroup>
         <p>
           I’m a passionate Web Designer and Web Developer based in Germany, with a strong background in creating visually compelling and highly functional websites.
-          <br>
-          <br>
           My journey in the digital world began with photography, focusing on nightclub and model photography, where I honed my skills in retouching and editing.
           <br>
           <br>
           This early experience sparked my interest in the broader field of digital design, leading me to pursue further education as a Media Designer.
-          <br>
-          <br>
           To deepen my skills and expand my expertise, I completed an intensive bootcamp in Full-Stack Web Development.
-          <br>
-          <br>
           This experience allowed me to master the latest technologies and development practices, enabling me to create dynamic, responsive, and user-friendly web applications.
           <br>
           <br>
           My expertise now lies in blending creative design with cutting-edge development techniques to deliver user-friendly digital experiences.
-          <br>
-          <br>
           I have a keen eye for detail, a deep understanding of UX/UI principles, and the technical skills to bring ideas to life across multiple platforms.
         </p>
-        <picture>
-          <img src="assets/img/oezcaneser.avif" alt="Özcan Eser, Web Designer and Developer" width: 600px, height: 600px>
-        </picture>
         <div class="card">
           <h3>
             Work Experience
@@ -178,7 +170,7 @@
         </div>
       </div>
     </div>
-    <div class="project bg-invert">
+    <div class="project bg-secondary">
       <div class="box-content">
         <hgroup>
           <p>
@@ -262,7 +254,7 @@
         </div>
       </div>
     </div>
-    <div class="contact bg-invert">
+    <div class="contact bg-secondary">
       <div class="box-content">
         <hgroup>
           <p>Connect with Me</p>
@@ -334,5 +326,6 @@
       </nav>
     </div>
   </footer>
+  <script src="js/index.js"></script>
 </body>
 </html>
