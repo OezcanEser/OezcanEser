@@ -21,6 +21,38 @@ header, footer {
   }
 }
 
+.burger-icon {
+  --fc-button: var(--white);
+  --bg-button: var(--transparent);
+  cursor: pointer;
+  display: grid;
+  gap: var(--space-xs);
+  padding: 0;
+  width: 32px;
+}
+
+.burger-icon::before, .burger-icon::after {
+  content: "";
+  display: block;
+  background-color: currentColor;
+  height: 2px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+.burger-line {
+  background-color: currentColor;
+  display: block;
+  height: 2px;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .burger-icon {
+    display: none;
+  }
+}
+
 .hero {
   --fc-headline: var(--fc-invert);
   --fc-paragraph: var(--fc-invert);
@@ -60,7 +92,7 @@ button[type="submit"]:hover {
   background: var(--bg-invert);
 }
 
-.box-header, .box-content, .box-footer {margin-inline: auto;}
+.box-header,.box-content,.box-footer{margin-inline:auto;}
 
 .box-header,
 .box-footer {
@@ -89,3 +121,7 @@ button[type="submit"]:hover {
 }
 
 hgroup {grid-column: 1 / -1;}
+
+nav[aria-label="Social Media Links"] {
+  --fc-anchor: var(--fc-invert);
+}
