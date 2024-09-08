@@ -122,6 +122,8 @@ button[type="submit"]:hover {
 
 hgroup {grid-column: 1 / -1;}
 
+.contact nav {grid-column: 1 / -1;}
+
 nav[aria-label="Social Media Links"] {
   --fc-anchor: var(--fc-invert);
 }
