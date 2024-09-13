@@ -3,22 +3,28 @@ header {
   top: 0;
 }
 
+.logo {
+  font-size: var(--fs-md);
+}
+
 header, footer {
   background-color: var(--bg-secondary);
   
   a {
     --fc-anchor: var(--fc-secondary);
     text-decoration: 6px underline var(--clr-underline-anchor);
-    transition: text-decoration-color 300ms;
     display: inline-block;
     padding: var(--space-md) var(--space-sm);
-  }
-
-  a[role=menuitem] {
-    &:hover {
+    
+    &[role=menuitem]:hover {
       --clr-underline-anchor: var(--clr-underline);
     }
   }
+}
+
+footer {
+  --fc-paragraph: var(--fc-secondary);
+  padding: var(--space-sm) 0;
 }
 
 @media (max-width: 768px) {
@@ -139,7 +145,11 @@ button[type="submit"]:hover {
   gap: var(--space-xs);
 }
 
-.contact nav, hgroup, .about p {grid-column: 1 / -1;}
+.contact nav, hgroup:not(:has(h1)) {grid-column: 1 / -1;}
+
+.hero div {
+  align-self: center;
+}
 
 nav[aria-label="Social Media Links"] {
   --fc-anchor: var(--fc-secondary);
@@ -152,5 +162,20 @@ nav[aria-label="Social Media Links"] {
 
   .nav-primary.is-active {
     display: block;
+  }
+}
+
+nav[aria-label="Social Media Links"] {
+  ul {
+    display: flex;
+    gap: var(--space-sm);
+    list-style: none;
+    padding: 0;
+  }
+  svg {
+    fill: var(--fc-secondary);
+    &:hover {
+      fill: var(--clr-accent-400);
+    }
   }
 }

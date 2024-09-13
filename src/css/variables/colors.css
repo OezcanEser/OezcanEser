@@ -12,8 +12,6 @@
   --yellow: hsl(35, 84%, 62%);
   --blue: hsl(208, 62%, 49%);
 
-  --transparent: transparent;
-
   --clr-primary-400: var(--anthrazit);
   --clr-secondary-400: var(--grayish-blue);
   --clr-accent-400: var(--cyan-green);
@@ -37,13 +35,12 @@
   /* Background colors */
   --bg-primary: var(--white);
   --bg-secondary: var(--clr-secondary-400);
-  --bg-anchor: var(--transparent);
+  --bg-anchor: ;
   --bg-button: var(--white);
 
   /* Decoration color */
   --clr-underline: var(--clr-accent-400);
   --clr-liststyle: var(--clr-accent-400);
-  --clr-underline-anchor: var(--transparent);
 
   /* Hover colors */
   --fc-hvr-anchor: var(--clr-primary-400);
