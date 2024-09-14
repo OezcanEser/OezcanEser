@@ -20,7 +20,7 @@
       <a class="logo" href="#">
         Özcan Eser
       </a>
-      <button class="icon-burger" id="icon-burger" aria-expanded="false">
+      <button class="icon-burger" id="icon-burger" aria-controls="nav-primary" aria-expanded="false" aria-label="Burger Icon">
         <span visibility: hidden>Navigation</span>
         <span class="line-burger"></span>
       </button>
@@ -56,28 +56,25 @@
     </div>
   </header>
   <main>
-    <div class="hero">
+    <div class="hero bg-secondary">
       <div class="box-content">
-        <div>
-          <hgroup>
-            <p>
-              Oh? Hello there!
-            </p>
-            <h1 id="hero">
-              I'm Özcan Eser
-            </h1>
-          </hgroup>
+        <hgroup>
           <p>
-            Web Designer & Developer based in Germany.
-            I bring creative visions to life with beautiful, functional websites. Let's build something amazing together!
+            Oh? Hello there!
           </p>
-        </div>
-        <picture>
-          <img src="assets/img/oezcaneser.avif" alt="Özcan Eser, Web Designer and Developer" width: 600px, height: 600px>
-        </picture>
+          <h1 id="hero">
+            I'm Özcan Eser
+          </h1>
+        </hgroup>
+        <div class="d-none-sm"></div>
+        <div class="d-none-sm"></div>
+        <p>
+          Web Designer & Developer based in Germany.
+          I bring creative visions to life with beautiful, functional websites. Let's build something amazing together!
+        </p>
       </div>
     </div>
-    <div class="about">
+    <section class="about">
       <div class="box-content">
         <hgroup>
           <p>
@@ -87,6 +84,7 @@
             About
           </h2>
         </hgroup>
+        <div class="d-none-sm"></div>
         <p>
           My journey in the digital world began with photography, focusing on nightclub and model photography, where I honed my skills in retouching and editing.
           This early experience sparked my interest in the broader field of digital design, leading me to pursue further education as a Media Designer.
@@ -99,79 +97,79 @@
           My expertise now lies in blending creative design with cutting-edge development techniques to deliver user-friendly digital experiences.
           I have a keen eye for detail, a deep understanding of UX/UI principles, and the technical skills to bring ideas to life across multiple platforms.
         </p>
-        <div class="card">
-          <h3>
-            Work Experience
-          </h3>
-          <ul>
-            <li>
-              <b>
-                Web and Creative Manager
-              </b>
-              <br>
-                Thought Leader Systems Management | 09.2021 - 09.2024
-            </li>
-            <li>
-              <b>
-                Medien Designer
-              </b>
-              <br>
-                RTO GmbH | 08.2015 - 06.2018
-            </li>
-            <li>
-              <b>
-                Freelance Photographer and Retoucher
-              </b>
-              <br>
-                Freelance | 10.2012 - 08.2015
-            </li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>
-            Certificates
-          </h3>
-          <ul>
-            <li>
-              <b>
-                Full-Stack Web Developer
-              </b>
-              <br>
-                SuperCode GmbH | 03.2021 - 08.2021
-            </li>
-            <li>
-              <b>
-                How to Create a UX Portfolio
-              </b>
-              <br>
-                Interaction Design Foundation | 02.2021 - 03.2021
-            </li>
-            <li>
-              <b>
-                Design Thinking: The Beginner´s Guide 
-              </b>
-              <br>
-                Interaction Design Foundation | 12.2020 - 02.2021
-            </li>
-            <li>
-              <b>
-                UX Design Masterclass
-              </b>
-              <br>
-                UX Design Masterclass | 07.2020
-            </li>
-            <li>
-              <b>
-                Ausbildung zum Ausbilder
-              </b>
-              <br>
-                IHK Frankfurt am Main | 12.2018
-            </li>
-          </ul>
-        </div>
+        <h3>
+          Work Experience
+        </h3>
+        <div class="d-none-sm"></div>
+        <div class="d-none-sm"></div>
+        <ul>
+          <li>
+            <b>
+              Web and Creative Manager
+            </b>
+            <br>
+              Thought Leader Systems Management | 09.2021 - 09.2024
+          </li>
+          <li>
+            <b>
+              Medien Designer
+            </b>
+            <br>
+              RTO GmbH | 08.2015 - 06.2018
+          </li>
+          <li>
+            <b>
+              Freelance Photographer and Retoucher
+            </b>
+            <br>
+              Freelance | 10.2012 - 08.2015
+          </li>
+        </ul>
+        <h3>
+          Certificates
+        </h3>
+        <div class="d-none-sm"></div>
+        <div class="d-none-sm"></div>
+        <ul>
+          <li>
+            <b>
+              Full-Stack Web Developer
+            </b>
+            <br>
+              SuperCode GmbH | 03.2021 - 08.2021
+          </li>
+          <li>
+            <b>
+              How to Create a UX Portfolio
+            </b>
+            <br>
+              Interaction Design Foundation | 02.2021 - 03.2021
+          </li>
+          <li>
+            <b>
+              Design Thinking: The Beginner´s Guide 
+            </b>
+            <br>
+              Interaction Design Foundation | 12.2020 - 02.2021
+          </li>
+          <li>
+            <b>
+              UX Design Masterclass
+            </b>
+            <br>
+              UX Design Masterclass | 07.2020
+          </li>
+          <li>
+            <b>
+              Ausbildung zum Ausbilder
+            </b>
+            <br>
+              IHK Frankfurt am Main | 12.2018
+          </li>
+        </ul>
       </div>
-    </div>
-    <div class="project bg-secondary">
+    </section>
+    <section class="project bg-secondary">
       <div class="box-content">
         <hgroup>
           <p>
@@ -182,8 +180,8 @@
           </h2>
         </hgroup>
       </div>
-    </div>
-    <div class="skills">
+    </section>
+    <section class="skills">
       <div class="box-content">
         <hgroup>
           <p>
@@ -193,103 +191,74 @@
             Skills
           </h2>
         </hgroup>
-        <div class="card">
-          <h3>
-            Web Design:
-          </h3>
-          <ul>
-            <li>Responsive Design</li>
-            <li>UI/UX Design</li>
-            <li>Graphic Design</li>
-            <li>Prototyping</li>
-            <li>Branding</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>
-            Web Frontend:
-          </h3>
-          <ul>
-            <li>HTML5</li>
-            <li>CSS3/SASS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>HubL</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>
-            Web Backend:
-          </h3>
-          <ul>
-            <li>JavaScript</li>
-            <li>Express.js</li>
-            <li>MongoDB</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>
-            Tools & Technologies:
-          </h3>
-          <ul>
-            <li>Adobe Creative Suite (Photoshop, Illustrator, XD)</li>
-            <li>Figma</li>
-            <li>Git</li>
-            <li>GitHub</li>
-            <li>Bootstrap</li>
-            <li>HubSpot</li>
-            <li>WordPress</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>
-            Other Skills:
-          </h3>
-          <ul>
-            <li>SEO Optimization</li>
-            <li>Cross-Browser Compatibility</li>
-            <li>Web Performance Optimization</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>
-            Languages:
-          </h3>
-          <ul>
-            <li>German (Native)</li>
-            <li>English (Fluent)</li>
-            <li>Türkish (Native)</li>
-          </ul>
+        <div class="d-none-sm"></div>
+        <div class="box-card">
+          <div class="card">
+            <h3>
+              Web Design:
+            </h3>
+            <ul>
+              <li>Responsive Design</li>
+              <li>UI/UX Design</li>
+              <li>Graphic Design</li>
+              <li>Prototyping</li>
+              <li>Branding</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>
+              Web Frontend:
+            </h3>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3/SASS</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>HubL</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>
+              Web Backend:
+            </h3>
+            <ul>
+              <li>JavaScript</li>
+              <li>Express.js</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>
+              Tech Tools:
+            </h3>
+            <ul>
+              <li>Adobe Creative Suite</li>
+              <li>Figma</li>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>HubSpot</li>
+              <li>WordPress</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>
+              Languages:
+            </h3>
+            <ul>
+              <li>German (Native)</li>
+              <li>English (Fluent)</li>
+              <li>Türkish (Native)</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="contact bg-secondary">
+    </section>
+    <section class="contact bg-secondary">
       <div class="box-content">
         <hgroup>
           <p>Connect with Me</p>
           <h2 id="contact">Contact</h2>
         </hgroup>
-        <!-- <form action="/submit" method="post">
-          <div class="form-group">
-            <label for="name">Vor- und Nachname</label>
-            <input type="text" id="name" name="name" required aria-required="true">
-          </div>
-          <div class="form-group">
-            <label for="company">Firma</label>
-            <input type="text" id="company" name="company" required aria-required="true">
-          </div>
-          <div class="form-group">
-            <label for="email">E-Mail</label>
-            <input type="email" id="email" name="email" required aria-required="true">
-          </div>
-          <div class="form-group">
-            <label for="message">Nachricht</label>
-            <textarea id="message" name="message" required aria-required="true"></textarea>
-          </div>
-          <div class="form-group">
-            <button type="submit">Absenden</button>
-          </div>
-        </form> -->
         <nav aria-label="Social Media Links">
           <ul>
             <li>
@@ -312,7 +281,7 @@
           </ul>
         </nav>
       </div>
-    </div>
+    </section>
   </main>
   <footer>
     <div class="box-footer">
