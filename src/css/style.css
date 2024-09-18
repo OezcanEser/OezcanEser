@@ -68,6 +68,7 @@ button[type="submit"]:hover {
 .bg-secondary {
   --fc-headline: var(--fc-secondary);
   --fc-paragraph: var(--fc-secondary);
+  --fc-list: var(--fc-secondary);
   background: var(--bg-secondary);
 }
 
@@ -91,10 +92,6 @@ button[type="submit"]:hover {
   max-width: var(--width-regular);
 
   @media (min-width: 1024px) {--columns: 30% 70%;}
-}
-
-.about p:not(hgroup p) {
-  margin-bottom: var(--space-lg);
 }
 
 .card {

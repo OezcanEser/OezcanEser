@@ -13,6 +13,20 @@
   --ff-paragraph: var(--ff-primary);
   --ff-anchor: inherit;
   --ff-button: inherit;
+  --ff-list: inherit;
+
+  /* Font weight */
+  --fw-900: 900;
+  --fw-600: 600;
+  --fw-400: 400;
+  --fw-300: 300;
+
+  --fw-body: var(--fw-400);
+  --fw-paragraph: var(--fw-400);
+  --fw-headline: var(--fw-400);
+  --fw-anchor: var(--fw-400);
+  --fw-button: var(--fw-400);
+  --fw-list: var(--fw-400);
 
   /* Line heights */
   --lh-15: 1.5;
@@ -21,6 +35,9 @@
   --lh-body: var(--lh-15);
   --lh-paragrah: var(--lh-15);
   --lh-headline: var(--lh-12);
+  --lh-anchor: var(--lh-12);
+  --lh-button: var(--lh-12);
+  --lh-list: var(--lh-12);
 
   /* Font weights */
   --fw-700: 700;
@@ -36,8 +53,12 @@
   --fs-rg: 1rem;
   --fs-sm: 0.75rem;
 
+  /* headlines are in content file */
   --fs-body: var(--fs-rg);
   --fs-paragrah: var(--fs-rg);
+  --fs-anchor: var(--fs-rg);
+  --fs-button: var(--fs-rg);
+  --fs-list: var(--fs-rg);
 }
 
 /* Font sizes tablet */

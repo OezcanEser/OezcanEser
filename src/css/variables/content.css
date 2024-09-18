@@ -2,6 +2,7 @@ body {
   color: var(--fc-body);
   font-family: var(--ff-body);
   font-size: var(--fs-body);
+  font-weight: var(--fw-body);
   line-height: var(--lh-body);
 }
 
@@ -9,12 +10,14 @@ p {
   color: var(--fc-paragraph);
   font-family: var(--ff-paragraph);
   font-size: var(--fs-paragrah);
+  font-weight: var(--fw-paragrah);
   line-height: var(--lh-paragrah);
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--fc-headline);
   font-family: var(--ff-headline);
+  /* font-weight: var(--fw-headline); */
   line-height: var(--lh-headline);
   &:not(h1){text-decoration: 6px underline var(--clr-underline);}
 }
@@ -45,12 +48,26 @@ h6 {
 
 a {
   color: var(--fc-anchor);
+  font-family: var(--ff-anchor);
+  font-size: var(--fs-anchor);
+  font-weight: var(--fw-anchor);
   background-color: var(--bg-anchor);
 }
 
 button {
   color: var(--fc-button);
+  font-family: var(--ff-button);
+  font-size: var(--fs-button);
+  font-weight: var(--fw-button);
   background: var(--bg-button);
+}
+
+ul {
+  color: var(--fc-list);
+  font-family: var(--ff-list);
+  font-size: var(--fs-list);
+  font-weight: var(--fw-list);
+  background: var(--bg-list);
 }
 
 ul[role="menu"] {display: flex;}

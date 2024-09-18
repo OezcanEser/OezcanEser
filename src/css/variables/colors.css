@@ -31,6 +31,7 @@
   --fc-paragraph: var(--fc-primary);
   --fc-anchor: var(--fc-primary);
   --fc-button: var(--fc-primary);
+  --fc-list: var(var(--fc-primary));
 
   /* Background colors */
   --bg-primary: var(--white);
