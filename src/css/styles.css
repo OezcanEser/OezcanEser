@@ -1,30 +1,16 @@
-header {
+.header-primary {
   position: sticky;
   top: 0;
+  --fc-anchor: var(--fc-secondary);
 }
 
 .logo {
   font-size: var(--fs-md);
 }
 
-header, footer {
-  background-color: var(--bg-secondary);
-  
-  a {
-    --fc-anchor: var(--fc-secondary);
-    text-decoration: 6px underline var(--clr-underline-anchor);
-    display: inline-block;
-    padding: var(--space-md) var(--space-sm);
-    
-    &[role=menuitem]:hover {
-      --clr-underline-anchor: var(--clr-underline);
-    }
-  }
-}
-
-footer {
-  --fc-paragraph: var(--fc-secondary);
-  padding: var(--space-sm) 0;
+a[role="menuitem"] {
+  display: inline-block;
+  padding: var(--space-md) var(--space-sm);
 }
 
 .icon-burger {
@@ -127,6 +113,11 @@ nav[aria-label="Social Media Links"] {
   gap: var(--space-md);
 }
 
+.footer-primary {
+  --fc-paragraph: var(--fc-secondary);
+  padding: var(--space-sm) 0;
+}
+
 @media (max-width: 768px) {
   .nav-primary {
     display: none;
@@ -141,7 +132,6 @@ nav[aria-label="Social Media Links"] {
   }
 
   .nav-primary {
-    background-color: var(--bg-secondary);
     position: absolute;
     top: 4.5rem;
     left: 1rem;
@@ -154,6 +144,7 @@ nav[aria-label="Social Media Links"] {
     li, a {
       width: 100%;
       text-align: center;
+      --bg-anchor: var(--bg-secondary);
     }
   }
 }

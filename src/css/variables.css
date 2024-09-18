@@ -1,0 +1,164 @@
+:root {
+  /* Colors */
+  --anthrazit: hsl(192, 11%, 18%);
+  --grayish-blue: hsl(217, 25%, 35%);
+  --cyan-green: hsl(165, 45%, 53%);
+
+  --white: hsl(0, 0%, 100%);
+  --gray: hsl(80, 3%, 58%);
+  --black: hsl(0, 0%, 0%);
+
+  --green: hsl(127, 69%, 43%);
+  --red: hsl(359, 70%, 43%);
+  --yellow: hsl(35, 84%, 62%);
+  --blue: hsl(208, 62%, 49%);
+
+  /* Theme colors */
+  --clr-primary-400: var(--anthrazit);
+  --clr-secondary-400: var(--grayish-blue);
+  --clr-accent-400: var(--cyan-green);
+
+  --clr-succes: var(--green);
+  --clr-error: var(--red);
+  --clr-warning: var(--yellow);
+  --clr-info: var(--blue);
+  --clr-disable: var(--gray);
+
+  /* Background */
+  --bg-primary: var(--white);
+  --bg-secondary: var(--clr-secondary-400);
+
+  /* Font */
+  --fc-primary: var(--clr-primary-400);
+  --fc-secondary: var(--white);
+
+  /* Decoration */
+  --clr-underline: var(--clr-accent-400);
+  --clr-liststyle: var(--clr-accent-400);
+
+  /* Hover */
+  --fc-hvr-anchor: var(--clr-primary-400);
+  --bg-hvr-anchor: var(--white);
+
+  --fc-hvr-button: var(--clr-primary-400);
+  --bg-hvr-button: var(--clr-accent-400);
+
+
+
+  /* Container widths */
+  --width-wide: 80rem;
+  --width-regular: 75rem;
+  --width-narrow: 65rem;
+
+  /* Spaces */
+  --space-lg: 2rem;
+  --space-md: 1.5rem;
+  --space-sm: 1rem;
+  --space-xs: .5rem;
+
+
+
+  /* Typography */
+  /* Fallback fonts */
+  --ff-sans: ui-sans-serif, system-ui, -apple-system;
+  --ff-serif: ui-serif;
+  --ff-mono: ui-monospace;
+
+  /* Font families */
+  --ff-primary: var(--ff-sans);
+  --ff-accent: var(--ff-serif);
+
+  /* Font sizes mobile */
+  --fs-3xl: 3.75rem;
+  --fs-2xl: 2.5rem;
+  --fs-xl: 2.25rem;
+  --fs-lg: 1.75rem;
+  --fs-md: 1.25rem;
+  --fs-rg: 1rem;
+  --fs-sm: 0.75rem;
+
+  /* Font weight */
+  --fw-900: 900;
+  --fw-700: 700;
+  --fw-600: 600;
+  --fw-400: 400;
+  --fw-300: 300;
+  --fw-100: 100;
+
+  /* Line heights */
+  --lh-15: 1.5;
+  --lh-12: 1.2;
+
+  /* Specific content */
+  --fc-body: var(--fc-primary);
+  --ff-body: var(--ff-primary);
+  --fs-body: var(--fs-rg);
+  --fw-body: var(--fw-400);
+  --lh-body: var(--lh-15);
+
+  --bg-header: var(--bg-secondary);
+
+  --fc-paragraph: var(--fc-primary);
+  --ff-paragraph: var(--ff-primary);
+  --fs-paragrah: var(--fs-rg);
+  --fw-paragraph: var(--fw-400);
+  --lh-paragrah: var(--lh-15);
+  
+  --fc-headline: var(--fc-primary);
+  --ff-headline: var(--ff-primary);
+  --fw-headline: var(--fw-400);
+  --lh-headline: var(--lh-12);
+
+  --fc-anchor: var(--fc-primary);
+  /* --fch-anchor: ; */
+  --ff-anchor: inherit;
+  --fs-anchor: var(--fs-rg);
+  --fw-anchor: var(--fw-400);
+  --lh-anchor: var(--lh-12);
+  --bg-anchor: transparent;
+  /* --td-anchor: ; */
+  --tdh-anchor: var(--clr-underline);
+
+  --fc-button: var(--fc-primary);
+  /* --fch-button: ; */
+  --ff-button: inherit;
+  --fs-button: var(--fs-rg);
+  --fw-button: var(--fw-400);
+  --lh-button: var(--lh-12);
+  --bg-button: transparent;
+  /* --bgh-button: ; */
+
+  --fc-list: var(--fc-primary);
+  --ff-list: inherit;
+  --fs-list: var(--fs-rg);
+  --fw-list: var(--fw-400);
+  --lh-list: var(--lh-12);
+
+  --bg-footer: var(--bg-secondary);
+}
+
+/* Font sizes tablet */
+@media (min-width: 768px) {
+  :root {
+    --fs-3xl: 4rem;
+    --fs-2xl: 3rem;
+    --fs-xl: 2.5rem;
+    --fs-lg: 1.75rem;
+    --fs-md: 1.25rem;
+    --fs-rg: 1.25rem;
+    --fs-sm: 1rem;
+  }
+}
+
+/* Font sizes desktop */
+@media (min-width: 1024px) {
+  :root {
+    --fs-3xl: 4.25rem;
+    --fs-2xl: 3.25rem;
+    --fs-xl: 2.75rem;
+    --fs-lg: 2rem;
+    --fs-md: 1.75rem;
+    --fs-rg: 1.25rem;
+    --fs-sm: 1rem;
+  }
+}

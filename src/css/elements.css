@@ -6,6 +6,10 @@ body {
   line-height: var(--lh-body);
 }
 
+header {
+  background-color: var(--bg-header);
+}
+
 p {
   color: var(--fc-paragraph);
   font-family: var(--ff-paragraph);
@@ -52,6 +56,19 @@ a {
   font-size: var(--fs-anchor);
   font-weight: var(--fw-anchor);
   background-color: var(--bg-anchor);
+  text-decoration: 6px underline var(--td-anchor);
+  /* border: 0 solid var(--bc-anchor); */
+  /* border-radius: var(--br-anchor); */
+}
+
+a:hover {
+  /* --fc-anchor: var(--fch-anchor); */
+  --td-anchor: var(--tdh-anchor);
+}
+
+a:focus-visible {
+  /* --fc-anchor: var(--fcf-anchor); */
+  --td-anchor: var(--tdf-anchor);
 }
 
 button {
@@ -60,16 +77,22 @@ button {
   font-size: var(--fs-button);
   font-weight: var(--fw-button);
   background: var(--bg-button);
+  /* border: 0 solid var(--bc-button); */
+  /* border-radius: var(--br-button); */
 }
 
-ul {
+ul, ol {
   color: var(--fc-list);
   font-family: var(--ff-list);
   font-size: var(--fs-list);
   font-weight: var(--fw-list);
-  background: var(--bg-list);
+  /* background: var(--bg-list); */
 }
 
 ul[role="menu"] {display: flex;}
 
 ::marker {color: var(--clr-liststyle);}
+
+footer {
+  background-color: var(--bg-footer);
+}
