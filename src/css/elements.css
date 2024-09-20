@@ -8,6 +8,7 @@ body {
 
 header {
   background-color: var(--bg-header);
+  z-index: 2;
 }
 
 p {

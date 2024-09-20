@@ -39,25 +39,6 @@ a[role="menuitem"] {
   width: 100%;
 }
 
-input[type="text"],
-input[type="email"],
-textarea,
-button[type="submit"] {
-  padding: var(--space-xs) var(--space-sm);
-}
-
-button[type="submit"]:hover {
-  --fc-button: var(--fc-hvr-button);
-  --bg-button: var(--bg-hvr-button);
-}
-
-.bg-secondary {
-  --fc-headline: var(--fc-secondary);
-  --fc-paragraph: var(--fc-secondary);
-  --fc-list: var(--fc-secondary);
-  background: var(--bg-secondary);
-}
-
 .box-header,.box-content,.box-footer{margin-inline:auto;}
 
 .box-header,
@@ -70,14 +51,14 @@ button[type="submit"]:hover {
 }
 
 .box-content {
-  --columns: 100%;
+  --columns: 1fr;
   display: grid;
   gap: var(--space-md);
   grid-template-columns: var(--columns);
   padding: 5rem var(--space-sm);
   max-width: var(--width-regular);
 
-  @media (min-width: 1024px) {--columns: 30% 70%;}
+  @media (min-width: 1024px) {--columns: 30% 1fr;}
 }
 
 .card {
@@ -86,7 +67,7 @@ button[type="submit"]:hover {
   gap: var(--space-md);
 }
 
-.contact nav, hgroup:not(:has(h1)) {grid-column: 1 / -1;}
+hgroup {grid-column: 1 / -1;}
 
 nav[aria-label="Social Media Links"] {
   --fc-anchor: var(--fc-secondary);
@@ -109,8 +90,20 @@ nav[aria-label="Social Media Links"] {
 
 .box-card {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
   gap: var(--space-md);
+}
+
+.experince,
+.contact {
+  align-items: center;
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: 1fr;
+}
+
+.card-secondary {
+  margin: 5rem var(--space-sm);
 }
 
 .footer-primary {
@@ -118,7 +111,18 @@ nav[aria-label="Social Media Links"] {
   padding: var(--space-sm) 0;
 }
 
+.bg-secondary {
+  --fc-headline: var(--fc-secondary);
+  --fc-paragraph: var(--fc-secondary);
+  --fc-list: var(--fc-secondary);
+  background: var(--bg-secondary);
+}
+
 @media (max-width: 768px) {
+  .header-primary {
+    padding-block: var(--space-md);
+  }
+
   .nav-primary {
     display: none;
   }
@@ -152,5 +156,52 @@ nav[aria-label="Social Media Links"] {
 @media (min-width: 769px) {
   .icon-burger {
     display: none;
+  }
+
+  .hero {
+    display: grid;
+    position: relative;
+    height: 80vh;
+    height: 80dvh;
+    
+    &::after {
+      content: "";
+      background-color: var(--bg-secondary);
+      inset: 0;
+      position: absolute;
+      opacity: 0.5;
+    }
+
+    picture,
+    .box-content {
+      grid-area: 1 / 1;
+    }
+
+    img {
+      height: 80vh;
+      height: 80dvh;
+      object-fit: cover;
+      object-position: top;
+      width: 100%;
+    }
+
+    .box-content {
+      align-content: end;
+      z-index: 1;
+    }
+  }
+
+  .experince,
+  .contact {
+    grid-template-columns: 1fr 1fr;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .card-secondary {
+    margin: 5rem var(--space-sm);
+    place-self: center;
   }
 }
